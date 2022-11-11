@@ -13,6 +13,9 @@
 		CE38F825291E2678003CA380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE38F823291E2678003CA380 /* Main.storyboard */; };
 		CE38F827291E2679003CA380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE38F826291E2679003CA380 /* Assets.xcassets */; };
 		CE38F82A291E2679003CA380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE38F828291E2679003CA380 /* LaunchScreen.storyboard */; };
+		CE38F833291E26F7003CA380 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE38F832291E26F7003CA380 /* Alamofire */; };
+		CE38F836291E270C003CA380 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE38F835291E270C003CA380 /* SwiftyJSON */; };
+		CE38F839291E27AA003CA380 /* Alegreya in Resources */ = {isa = PBXBuildFile; fileRef = CE38F838291E27AA003CA380 /* Alegreya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,7 @@
 		CE38F826291E2679003CA380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE38F829291E2679003CA380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE38F82B291E2679003CA380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE38F838291E27AA003CA380 /* Alegreya */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Alegreya; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE38F836291E270C003CA380 /* SwiftyJSON in Frameworks */,
+				CE38F833291E26F7003CA380 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,7 @@
 		CE38F81C291E2677003CA380 /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
+				CE38F837291E2753003CA380 /* Fonts */,
 				CE38F81D291E2677003CA380 /* AppDelegate.swift */,
 				CE38F81F291E2677003CA380 /* SceneDelegate.swift */,
 				CE38F821291E2678003CA380 /* ViewController.swift */,
@@ -65,6 +72,14 @@
 				CE38F82B291E2679003CA380 /* Info.plist */,
 			);
 			path = Meditation;
+			sourceTree = "<group>";
+		};
+		CE38F837291E2753003CA380 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE38F838291E27AA003CA380 /* Alegreya */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +98,10 @@
 			dependencies = (
 			);
 			name = Meditation;
+			packageProductDependencies = (
+				CE38F832291E26F7003CA380 /* Alamofire */,
+				CE38F835291E270C003CA380 /* SwiftyJSON */,
+			);
 			productName = Meditation;
 			productReference = CE38F81A291E2677003CA380 /* Meditation.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +130,10 @@
 				Base,
 			);
 			mainGroup = CE38F811291E2677003CA380;
+			packageReferences = (
+				CE38F831291E26F7003CA380 /* XCRemoteSwiftPackageReference "alamofire" */,
+				CE38F834291E270C003CA380 /* XCRemoteSwiftPackageReference "swiftyJSON" */,
+			);
 			productRefGroup = CE38F81B291E2677003CA380 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +150,7 @@
 			files = (
 				CE38F82A291E2679003CA380 /* LaunchScreen.storyboard in Resources */,
 				CE38F827291E2679003CA380 /* Assets.xcassets in Resources */,
+				CE38F839291E27AA003CA380 /* Alegreya in Resources */,
 				CE38F825291E2678003CA380 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +318,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,9 +326,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.madwsr.Meditation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,6 +349,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,9 +357,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.madwsr.Meditation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -356,6 +388,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE38F831291E26F7003CA380 /* XCRemoteSwiftPackageReference "alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/alamofire/alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		CE38F834291E270C003CA380 /* XCRemoteSwiftPackageReference "swiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/swiftyJSON/swiftyJSON/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE38F832291E26F7003CA380 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE38F831291E26F7003CA380 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+		CE38F835291E270C003CA380 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE38F834291E270C003CA380 /* XCRemoteSwiftPackageReference "swiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE38F812291E2677003CA380 /* Project object */;
 }
